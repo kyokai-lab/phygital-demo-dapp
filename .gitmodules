@@ -1,0 +1,3 @@
+[submodule "dapp-demo"]
+	path = dapp-demo
+	url = ./dapp-demo
