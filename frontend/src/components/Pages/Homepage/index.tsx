@@ -12,7 +12,7 @@ type NFT = {
     image: string;
 }
 
-const contractAddresses = ["0x0E8FB39547A270C4979d37345Af5eAf784F1384c"];
+const contractAddresses = ["0xC52e1f6fC9128cD5B34Cf81f6f342C23E23C8a35"];
 
 const erc721EnumerableABI = [
     'function balanceOf(address owner) view returns (uint256)',
@@ -66,7 +66,7 @@ const HomePage = () => {
                                 i
                             );
                             const tokenURI = await contract.tokenURI(tokenId);
-                            const response = await fetch(`${tokenURI}.json`);
+                            const response = await fetch(`${tokenURI}`);
                             const metadata = await response.json();
                             tokenMetadatas.push(metadata);
                         }
@@ -116,12 +116,12 @@ const HomePage = () => {
             <Link
                 className="text-blue-500"
                 href={
-                `${chain?.blockExplorers?.default?.url}/address/0x0E8FB39547A270C4979d37345Af5eAf784F1384c` ??
+                `${chain?.blockExplorers?.default?.url}/address/0xC52e1f6fC9128cD5B34Cf81f6f342C23E23C8a35` ??
                 "#"
                 }
                 target="_blank"
             >
-                {shortenSmartContractAddress("0x0E8FB39547A270C4979d37345Af5eAf784F1384c")}
+                {shortenSmartContractAddress("0xC52e1f6fC9128cD5B34Cf81f6f342C23E23C8a35")}
             </Link>
         </p>
         <p className="font-semibold">MY NFTs</p>
