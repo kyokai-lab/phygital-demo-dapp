@@ -1,0 +1,16 @@
+{
+  "name": "deploy-nft",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "edit-json-file": "^1.7.0",
+    "ipfs-car": "^1.0.0",
+    "rename": "^1.0.4"
+  },
+  "scripts": {
+    "generate-img-car": "npx ipfs-car pack images --output images.car",
+    "update-image-metadata": "node index.js",
+    "generate-metadata-car": "npx ipfs-car pack metadata --output metadata.car"
+  }
+}
