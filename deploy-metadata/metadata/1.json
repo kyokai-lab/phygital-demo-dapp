@@ -1,0 +1,35 @@
+{
+  "name": "NFT Asset Name #1",
+  "description": "NFT Asset Detailed Description #1",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Red"
+    },
+    {
+      "trait_type": "Fur",
+      "value": "Green"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Chill"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Happy"
+    },
+    {
+      "trait_type": "Clothes",
+      "value": "Shape 1"
+    }
+  ],
+  "creators": [],
+  "collection": {
+    "name": "Collection Name",
+    "family": "Unique Family Name"
+  },
+  "symbol": "NFT",
+  "seller_fee_basis_points": 0,
+  "image": "YOUR_IMAGE_BASE_URI1.png",
+  "compiler": "Genfty.com"
+}

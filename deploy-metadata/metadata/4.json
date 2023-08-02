@@ -1,0 +1,35 @@
+{
+  "name": "NFT Asset Name #4",
+  "description": "NFT Asset Detailed Description #4",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Green"
+    },
+    {
+      "trait_type": "Fur",
+      "value": "Black"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Proud"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Thinking"
+    },
+    {
+      "trait_type": "Clothes",
+      "value": "Coat"
+    }
+  ],
+  "creators": [],
+  "collection": {
+    "name": "Collection Name",
+    "family": "Unique Family Name"
+  },
+  "symbol": "NFT",
+  "seller_fee_basis_points": 0,
+  "image": "YOUR_IMAGE_BASE_URI4.png",
+  "compiler": "Genfty.com"
+}
