@@ -48,7 +48,7 @@ contract ProductItem is ERC721, Ownable, AccessControl, ERC721Enumerable {
        
         require(_exists(tokenId), "ERC721URIStorage: URI query for nonexistent token");
  
-        return string(abi.encodePacked(_baseURI(), tokenId.toString()));
+        return string(abi.encodePacked(_baseURI(), tokenId.toString(), ".json"));
     }
 
 
