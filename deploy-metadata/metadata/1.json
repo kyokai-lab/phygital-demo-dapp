@@ -30,6 +30,6 @@
   },
   "symbol": "NFT",
   "seller_fee_basis_points": 0,
-  "image": "1.png",
+  "image": "https://ipfs.io/ipfs/QmVq8fu7USwr2sbwYgXEhbv2YyUNQpRYFBAPd5bUqwtKUa/1.png",
   "compiler": "Genfty.com"
 }
