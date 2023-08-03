@@ -37,11 +37,11 @@ const NFTItem = (props: NFTItemProps) => {
                 <Image src={image} alt="NFT" fill className="rounded-xl" />
             </div>
             <div className="w-full flex flex-col h-full">
-                <p className="font-semibold">{name}</p>
-                <p className="font-semibold text-[14px]">{description}</p>
+                <p className="text-black font-semibold">{name}</p>
+                <p className="text-black font-semibold text-[14px]">{description}</p>
                 <div className="w-full border-b-[1px] border-b-black mt-[12px]"></div>
                 {attributes?.map((attribute, index) => (
-                    <p key={index} className="font-semibold text-[14px]">
+                    <p key={index} className="text-black font-semibold text-[14px]">
                         {attribute.trait_type}: {attribute.value}
                     </p>
                 ))}
@@ -58,6 +58,7 @@ const HomePage = () => {
     const [smcAddresses, setSmcAddresses] = useState<string[]>([]);
 
     const onAddNewAddress = (address: string) => {
+        if (address?.length === 0) return;
         setSmcAddresses([...smcAddresses, address]);
     }
 
@@ -122,9 +123,9 @@ const HomePage = () => {
       <div className="flex min-h-screen w-full flex-col items-start gap-[24px] p-[20px] md:p-[80px]">
         <Web3Button />
         <SmcDialog onAddNewSMC={onAddNewAddress} />
-        <p className="font-semibold">Network: {chain?.name}</p>
+        <p className="font-semibold">Mạng Blockchain: {chain?.name}</p>
         <p className="font-semibold">
-            Network Explorer: {""}
+            Đường dẫn: {""}
             <Link
                 className="text-blue-500"
                 href={`${chain?.id == 7331 ? "https://dnc.danang.gov.vn" : chain?.blockExplorers?.default?.url}` ?? "#"}
@@ -134,7 +135,7 @@ const HomePage = () => {
             </Link>
         </p>
         <p className="font-semibold flex flex-col">
-            Smart contract:{" "}
+            Hợp đồng thông minh:{" "}
             {smcAddresses.map((address, index) => (
                 <Link
                     key={index}
@@ -149,9 +150,9 @@ const HomePage = () => {
                 </Link>
             ))}
         </p>
-        <p className="font-semibold">MY NFTs</p>
+        <p className="font-semibold">NFTs của tôi</p>
         <div className="w-full flex flex-col gap-[20px]">
-            {loading && <div>Loading...</div>}
+            {loading && <div>Đang tải...</div>}
             {userNFTMetadatas?.map((item: NFT, index: number) => (
                 <NFTItem
                     key={index}
@@ -162,7 +163,7 @@ const HomePage = () => {
                 />
             ))}
             {userNFTMetadatas?.length === 0 && (
-                <div>No NFTs found</div>
+                <div>Không có NFTs</div>
             )}
         </div>
       </div>
